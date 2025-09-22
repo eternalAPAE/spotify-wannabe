@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider Music</title>
+  <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background-color: #0f0f1f;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #111;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-right: 2px solid #ff00ff;
+    }
+
+    .sidebar h1 {
+      color: #ff00ff;
+      font-size: 2em;
+      text-align: center;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    }
+
+    .sidebar button {
+      padding: 15px;
+      background: none;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    }
+
+    .sidebar button:hover {
+      background-color: #00ffff;
+      color: #111;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+    }
+
+    .playlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .song {
+      background-color: #1a1a2e;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid #ff00ff;
+      box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    }
+
+    .song img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    }
+
+    .song h3 {
+      color: #ff00ff;
+      margin-bottom: 5px;
+      text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    }
+
+    .song p {
+      color: #00ffff;
+      font-size: 0.9em;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    .song:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+    }
+
+    /* Neon heading */
+    .neon {
+      text-align: center;
+      font-size: 3em;
+      color: #ff00ff;
+      text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h1>SPIDER</h1>
+    <button>Home</button>
+    <button>Search</button>
+    <button>Library</button>
+    <button>Settings</button>
+  </div>
+
+  <div class="main">
+    <div class="neon">Your Playlist</div>
+    <div class="playlist">
+      <div class="song">
+        <img src="https://picsum.photos/200/200?random=1" alt="Album Cover">
+        <h3>Neon Dreams</h3>
+        <p>Artist 1</p>
+      </div>
+      <div class="song">
+        <img src="https://picsum.photos/200/200?random=2" alt="Album Cover">
+        <h3>Electric Nights</h3>
+        <p>Artist 2</p>
+      </div>
+      <div class="song">
+        <img src="https://picsum.photos/200/200?random=3" alt="Album Cover">
+        <h3>Spider Beats</h3>
+        <p>Artist 3</p>
+      </div>
+      <div class="song">
+        <img src="https://picsum.photos/200/200?random=4" alt="Album Cover">
+        <h3>Glow City</h3>
+        <p>Artist 4</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
